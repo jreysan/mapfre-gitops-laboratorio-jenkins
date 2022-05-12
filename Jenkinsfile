@@ -7,7 +7,7 @@ pipeline {
                 echo 'Hello World'
             }
         }
-     stage('Segunda Stage) {
+     stage('Segunda Stage') {
          agent { label 'docker-agent'}
 	 steps {
                 sh '''
