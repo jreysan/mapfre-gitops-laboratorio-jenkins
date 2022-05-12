@@ -17,5 +17,14 @@ pipeline {
                 '''
             }
         }
+	stage('Testing') {
+            when {
+                branch 'PR-*'
+            }
+            agent { label 'agent' }
+            steps {
+                sh './test.sh'
+            }
+        }
     }
 }
